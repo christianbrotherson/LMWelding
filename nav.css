@@ -1,0 +1,38 @@
+.buffer {
+    background-color: rgba(52, 58, 64, 1);
+    height: 96px;
+    /* margin-bottom: 96px; */
+}
+
+.logo {
+    height: 70px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(52, 58, 64, 0.7)!important;
+    margin-top: -96px;
+}
+
+.nav-item a {
+    color: white!important;
+    transition: all .3s ease-out;
+}
+
+.nav-item a:hover {
+    color: #EE1C25!important;
+}
+
+.dropdown-menu a {
+    color: rgba(52, 58, 64, 1)!important;
+}
+
+.dropdown-menu {
+    background-color: white;
+}
+
+.dropdown-item:hover {
+    background-color: white!important;
+}
