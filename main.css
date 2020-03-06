@@ -138,6 +138,18 @@ h1 {
     background-color: rgba(52, 58, 64, 1);
 }
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.service {
+    border-radius: 0;
+    background-color: white;
+    border: 1px solid #EE1C25;
+}
+
 /* Contact Section */
 
 #contact {
