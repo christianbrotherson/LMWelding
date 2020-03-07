@@ -21,12 +21,6 @@ h1 {
     height: 80vh;
 }
 
-#header img {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
-}
-
 @media (max-width: 576px) {
     #header {
         background-attachment: scroll;
@@ -134,20 +128,121 @@ h1 {
 
 /* Services Section */
 
-#services {
+.s1 { 
+    grid-area: s1; 
+    background-image: url(./images/spotlight/spotlight_gate.png);
+}
+
+.s2 { 
+    grid-area: s2;  
+    background-image: url(./images/spotlight/spotlight_powder_coat.png);
+}
+.s3 { 
+    grid-area: s3;  
+    background-image: url(./images/spotlight/spotlight_cnc.png);
+}
+.s4 { 
+    grid-area: s4;  
+    background-image: url(./images/spotlight/spotlight_gate.png);
+}
+
+.s5 { 
+    grid-area: s5; 
+    background-image: url(./images/spotlight/spotlight_gate.png);
+}
+
+.s6 { 
+    grid-area: s6;  
+    background-image: url(./images/spotlight/spotlight_powder_coat.png);
+}
+.s7 { 
+    grid-area: s7;  
+    background-image: url(./images/spotlight/spotlight_cnc.png);
+}
+.s8 { 
+    grid-area: s8;  
+    background-image: url(./images/spotlight/spotlight_gate.png);
+}
+
+.services {
     background-color: rgba(52, 58, 64, 1);
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .service {
-    border-radius: 0;
-    background-color: white;
-    border: 1px solid #EE1C25;
+    position: relative;
+    margin: 5px;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 230px;
+    width: 230px;
+    border-radius: 10px;
+}
+
+.img-overlay {
+    background-color: rgba(66, 15, 18, 0.5);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px black;
+    transition: all .3s ease-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-overlay:hover {
+    background-color: rgba(52, 58, 64, 0);
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        display: grid;
+        grid-template-areas: 
+            's1 s2'
+            's3 s4'
+            's5 s6'
+            's7 s8'
+        ;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-areas: 
+            's1 s2'
+            's3 s4'
+            's5 s6'
+            's7 s8'
+        ;
+
+        /* grid-gap: 2px; */
+    }
+
+    .service {
+        height: 170px;
+        width: 170px;
+    }
+
+    .img-overlay {
+        background-color: rgba(52, 58, 64, 0);
+    }
 }
 
 /* Contact Section */
