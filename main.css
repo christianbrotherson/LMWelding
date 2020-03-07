@@ -139,16 +139,16 @@ h1 {
 }
 .s3 { 
     grid-area: s3;  
-    background-image: url(./images/spotlight/spotlight_cnc.png);
+    background-image: url(./images/spotlight/spotlifgh_fence.png);
 }
 .s4 { 
     grid-area: s4;  
-    background-image: url(./images/spotlight/spotlight_gate.png);
+    background-image: url(./images/spotlight/spotlight_cnc.png);
 }
 
 .s5 { 
     grid-area: s5; 
-    background-image: url(./images/spotlight/spotlight_gate.png);
+    background-image: url(./images/spotlight/spotlight_fabrication.png);
 }
 
 .s6 { 
@@ -157,37 +157,45 @@ h1 {
 }
 .s7 { 
     grid-area: s7;  
-    background-image: url(./images/spotlight/spotlight_cnc.png);
+    background-image: url(./images/spotlight/spotlight_structural.png);
 }
 .s8 { 
     grid-area: s8;  
-    background-image: url(./images/spotlight/spotlight_gate.png);
+    background-image: url(./images/spotlight/spotlight_ornamental.png);
 }
 
 .services {
     background-color: rgba(52, 58, 64, 1);
+    align-content: center;
 }
 
 .services-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
-    padding: 20px 0;
+    grid-gap: 2px;
+    grid-template-columns: 230px 230px 230px 230px;
+    grid-template-areas: 
+        's1 s2 s3 s4'
+        's5 s6 s7 s8'
+    ;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
 }
 
 .service {
     position: relative;
-    margin: 5px;
+    /* margin: 5px; */
     background-position: top;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 230px;
     width: 230px;
-    border-radius: 10px;
 }
 
 .img-overlay {
     background-color: rgba(66, 15, 18, 0.5);
-    border-radius: 10px;
 
     position: absolute;
     top: 0;
@@ -213,35 +221,26 @@ h1 {
 
 @media (max-width: 992px) {
     .services-grid {
-        display: grid;
+        grid-template-columns: 230px 230px;
         grid-template-areas: 
             's1 s2'
             's3 s4'
             's5 s6'
             's7 s8'
         ;
+
+        justify-content: center;
     }
 }
 
 @media (max-width: 576px) {
     .services-grid {
-        grid-template-areas: 
-            's1 s2'
-            's3 s4'
-            's5 s6'
-            's7 s8'
-        ;
-
-        /* grid-gap: 2px; */
+        grid-template-columns: repeat(2, 170px);
     }
 
     .service {
         height: 170px;
         width: 170px;
-    }
-
-    .img-overlay {
-        background-color: rgba(52, 58, 64, 0);
     }
 }
 
