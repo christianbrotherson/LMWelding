@@ -79,13 +79,11 @@ h1 {
 #about {
     color: black;
     font-size: 14px;
-
     border-top: 2px solid #EE1C25;
     border-bottom: 2px solid #EE1C25;
-}
 
-.card {
-    border: none!important;
+    display: flex;
+    justify-content: space-around;
 }
 
 .hd-about {
@@ -93,6 +91,7 @@ h1 {
 }
 
 .txt-about {
+    /* align-self: top; */
     grid-area: txt_about;
 }
 
@@ -100,33 +99,64 @@ h1 {
     grid-area: pic_about;
 }
 
-.pic-about img {
-    height: 200px;
+.pic-about {
+    background-image: url(./images/shop.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
 }
 
 .about_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 20px;
-    grid-template: 
-        "pic_about pic_about hd_about hd_about"
-        "pic_about pic_about txt_about txt_about"
-        "pic_about pic_about txt_about txt_about"
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'hd_about pic_about'
+        'hd_about pic_about'
     ;
+}
+
+.about_grid > .card {
+    border: none!important;
+}
+
+@media (max-width: 992px) {
+    .about_grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'hd_about'
+            'pic_about'
+        ;
+    }
+
+    .hd-about {
+        width: 510px;
+        justify-self: center;
+    }
+
+    .pic-about {
+        place-self: center;
+        width: 510px;
+    }
 }
 
 @media (max-width: 576px) {
     .about_grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 20px;
+        grid-template-columns: 1fr;
         grid-template: 
             "hd_about"
-            "txt_about"
             "pic_about"
         ;
+    }
+
+    .hd-about {
+        width: 320px;
+    }
+
+    .pic-about {
+        width: 320px;
+        height: 250px;
     }
 }
 
