@@ -19,6 +19,7 @@ h1 {
     background-size: cover;
     background-attachment: fixed;
     height: 80vh;
+    padding-top: 90px;
 }
 
 @media (max-width: 576px) {
