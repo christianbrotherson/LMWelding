@@ -39,7 +39,10 @@
 
 #copyright {
     background-color: rgba(52, 58, 64, 1)!important;
+    position: fixed;
     bottom: 0px;
+    left: 0px;
+    width: 100%;
     overflow: auto;
 
     padding-top: 10px;
