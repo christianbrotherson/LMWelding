@@ -20,6 +20,9 @@ h1 {
     background-attachment: fixed;
     height: 80vh;
     padding-top: 90px;
+
+    
+    border-bottom: 2px solid #EE1C25;
 }
 
 @media (max-width: 576px) {
@@ -80,8 +83,6 @@ h1 {
 #about {
     color: black;
     font-size: 14px;
-    border-top: 2px solid #EE1C25;
-    border-bottom: 2px solid #EE1C25;
 
     display: flex;
     justify-content: space-around;
@@ -89,6 +90,7 @@ h1 {
 
 .hd-about {
     grid-area: hd_about;
+    align-items: center;
 }
 
 .txt-about {
@@ -118,7 +120,12 @@ h1 {
     ;
 }
 
-.about_grid > .card {
+.about_grid_services {
+    display: flex;
+    justify-content: center;
+}
+
+.about_grid > .card, .about_grid_services > .card {
     border: none!important;
     border-radius: 0!important;
 }
@@ -203,6 +210,9 @@ h1 {
 .services {
     background-color: rgba(52, 58, 64, 1);
     align-content: center;
+    
+    border-top: 2px solid #EE1C25;
+    border-bottom: 2px solid #EE1C25;
 }
 
 .services-grid {
@@ -228,6 +238,17 @@ h1 {
     background-size: cover;
     height: 230px;
     width: 230px;
+    transition: transform .3s;
+}
+
+.about_grid_services h1 {
+    text-align: center;
+}
+
+.zoom:hover {
+    transform: scale(2.0);
+    z-index: 10;
+    border: 1px solid #EE1C25;
 }
 
 .img-overlay {
@@ -282,12 +303,17 @@ h1 {
     .img-overlay:hover {
         background-color: rgba(66, 15, 18, .5);
     }
+
+    .zoom:hover {
+        transform: none;
+        border: none;
+        z-index: 10;
+    }
 }
 
 /* Contact Section */
 
-.contact {
-    border-top: 2px solid #EE1C25;
+#contact {
     border-bottom: 2px solid #EE1C25;
 }
 
