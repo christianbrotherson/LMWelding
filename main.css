@@ -13,7 +13,7 @@ h1 {
 }
 
 #header {
-    background-image: url(./images/main_background.jpg);
+    background-image: url(./images/main_background-min.jpg);
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,7 +103,7 @@ h1 {
 }
 
 .pic-about {
-    background-image: url(./images/shop.png);
+    background-image: url(./images/shop.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
@@ -224,15 +224,10 @@ h1 {
         's1 s2 s3 s4'
         's5 s6 s7 s8'
     ;
-
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
 }
 
 .service {
     position: relative;
-    /* margin: 5px; */
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
