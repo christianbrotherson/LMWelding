@@ -236,14 +236,14 @@ h1 {
     transition: transform .3s;
 }
 
-.about_grid_services h1 {
-    text-align: center;
-}
-
 .zoom:hover {
     transform: scale(2.0);
     z-index: 10;
     border: 1px solid #EE1C25;
+}
+
+.about_grid_services h1 {
+    text-align: center;
 }
 
 .img-overlay {
