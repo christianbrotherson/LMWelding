@@ -236,10 +236,26 @@ h1 {
     transition: transform .3s;
 }
 
+.service-num {
+    position: fixed;
+}
+
+.service-pic {
+    /* position: relative; */
+    height: 230px;
+    width: 230px;
+    transition: transform .2s;
+}
+
+.service:hover {
+    cursor: pointer;
+}
+
 .zoom:hover {
     transform: scale(2.0);
-    z-index: 10;
+    z-index: 3000;
     border: 1px solid;
+    position: relative;
 }
 
 .about_grid_services h1 {
@@ -260,7 +276,7 @@ h1 {
     font-size: 20px;
     text-transform: uppercase;
     text-shadow: 2px 2px 3px black;
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
 
     display: flex;
     align-items: center;
@@ -300,11 +316,24 @@ h1 {
         background-color: rgba(66, 15, 18, .5);
     }
 
-    .zoom:hover {
+    /* .zoom:hover {
         transform: none;
         border: none;
         z-index: 10;
-    }
+    } */
+}
+
+.service:hover > .pic-num {
+    opacity: 100%;
+}
+
+.pic-num {
+    background-color: black;
+    text-transform: none;
+    height: 20px;
+    opacity: 50%;
+    bottom: 0;
+    top: auto;
 }
 
 /* Contact Section */
