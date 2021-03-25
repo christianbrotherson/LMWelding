@@ -316,11 +316,11 @@ h1 {
         background-color: rgba(66, 15, 18, .5);
     }
 
-    /* .zoom:hover {
+    .zoom:hover {
         transform: none;
-        border: none;
+        border: noadfne;
         z-index: 10;
-    } */
+    }
 }
 
 .service:hover > .pic-num {
